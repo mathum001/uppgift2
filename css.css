@@ -1,0 +1,170 @@
+
+/* html{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+} */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background: green;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+.content{
+    height: 100vh;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5e/Warp_and_weft_2.jpg');
+    background-color: #333;
+    background-blend-mode: multiply;
+    background-size: cover;
+    display: grid;
+    /* place-items: center; */
+}
+
+header{
+    background: black;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+
+
+}
+
+.logo{
+    color: white;
+}
+
+.logobild{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 20%;
+    border-radius: 5px;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after{
+    top: 7px;
+}
+
+nav{
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    display: none;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    color: #0000;
+
+}
+
+.nav-toggle:checked ~ nav {
+    display: block;
+}
+
+
+.topcontent{
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 5em;
+}
+
+input{
+    background-color: grey;
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.btmcontent{
+    width: 100%;
+    color: black;
+    background-color: white;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.animation{
+    animation: animation 5s linear 5;
+}
+
+@keyframes animation{
+    0%{color: grey;}
+    50%{color: pink;}
+    100%{color: black;}
+}
+
+@media only screen and (min-width: 600px){
+    .content{
+        display: flex;
+    }
+    
+    .btmcontent{
+        margin-top: 5em;
+    }
+}
